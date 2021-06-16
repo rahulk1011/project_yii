@@ -4,5 +4,7 @@
 		'Home' => 'Home',
 		'About' => 'About',
 		'Contact' => 'Contact',
-		'Login' => 'Login'
+		'Login' => 'Login',
+		'for new account {register}' => 'For new account, {register} here',
+		'register' => 'Sign Up'
 	];
