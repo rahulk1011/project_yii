@@ -3,13 +3,14 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
-use app\widgets\Alert;
+//use app\widgets\Alert;
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 use app\components\LanguageDropdown;
+use yii\bootstrap\Alert;
 
 AppAsset::register($this);
 ?>
@@ -64,12 +65,12 @@ AppAsset::register($this);
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
-		<?php if(!empty(Yii::$app->session->getFlash('success'))): ?>
-            <div class="alert alert-success alert-dismissible" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <?= Yii::$app->session->getFlash('success') ?>
-            </div>
-        <?php endif; ?>
+		<?php if(!empty(Yii::$app->session->getFlash('success'))){
+            echo Alert::widget([
+                'options' => ['class' => 'alert-success alert-dismissible'],
+                'body' => Yii::$app->session->getFlash('success')
+            ]);
+        } ?>
         <?= $content ?>
     </div>
 </div>

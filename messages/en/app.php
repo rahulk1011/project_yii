@@ -6,5 +6,8 @@
 		'Contact' => 'Contact',
 		'Login' => 'Login',
 		'for new account {register}' => 'For new account, {register} here',
-		'register' => 'Sign Up'
+		'register' => 'Sign Up',
+		'Please click on {link}' => 'Please click {link} to activate your account',
+		'activate_link' => 'here',
+		'Successfully registered' => 'Successfully registered. Please check your email.' 
 	];
