@@ -36,8 +36,8 @@ $config = [
             'transport' => [
                 'class' => 'Swift_SmtpTransport',
                 'host' => 'smtp.gmail.com',
-                'username' => 'demo@gmail.com',
-                'password' => 'password',
+                'username' => 'risktesting.demo@gmail.com',
+                'password' => 'ftibuaphhaolztvt',
                 'port' => '587',
                 'encryption' => 'tls'
             ]
@@ -82,9 +82,17 @@ $config = [
                 ],
                 'facebook' => [
                     'class' => 'yii\authclient\clients\Facebook',
-                    'clientId' => 'app_id',
-                    'clientSecret' => 'app_password',
+                    'clientId' => 'facebook_client_id',
+                    'clientSecret' => 'facebook_client_secret',
                 ],
+				'twitter' => [
+                    'class' => 'yii\authclient\clients\Twitter',
+                    'attributeParams' => [
+                        'include_email' => 'true'
+                    ],
+                    'consumerKey' => 'twitter_consumer_key',
+                    'consumerSecret' => 'twitter_consumer_secret',
+                ], 
                 // etc.
             ],
         ],
